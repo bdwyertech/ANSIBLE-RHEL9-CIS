@@ -20,6 +20,10 @@
             - item.path != "/var/log/btmp"
             - item.path != "/var/log/utmp"
             - item.path != "/var/log/wtmp"
+  rescue:
+      - name: '4.2.3 | Rescue'
+        ansible.builtin.debug:
+            msg: '{{ ansible_failed_task.name }}'
   when:
       - rhel9cis_rule_4_2_3
   tags:
