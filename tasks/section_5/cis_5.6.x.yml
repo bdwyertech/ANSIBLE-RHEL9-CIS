@@ -94,9 +94,9 @@
 
 #      - name: "5.6.5 | PATCH | Ensure default user umask is 027 or more restrictive | Set umask for /etc/bashrc"
 #        ansible.builtin.lineinfile:
-            path: /etc/login.defs
-            regexp: '^USERGROUPS_ENAB'
-            line: USERGROUPS_ENAB no
+#            path: /etc/login.defs
+#            regexp: '^USERGROUPS_ENAB'
+#            line: USERGROUPS_ENAB no
 
   when:
       - rhel9cis_rule_5_6_5
